@@ -54,6 +54,12 @@ pallet-template = { version = "4.0.0-dev", default-features = false, path = "../
 [build-dependencies]
 substrate-wasm-builder = { version = "5.0.0-dev", git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.23" }
 
+[dependencies.pallet-nicks]
+default-features = false
+git = 'https://github.com/paritytech/substrate.git'
+branch = "polkadot-v0.9.23" 
+version = '4.0.0-dev'
+
 [features]
 default = ["std"]
 std = [
@@ -83,6 +89,7 @@ std = [
 	"sp-std/std",
 	"sp-transaction-pool/std",
 	"sp-version/std",
+	"pallet-nicks/std", 
 ]
 runtime-benchmarks = [
 	"frame-benchmarking/runtime-benchmarks",
